@@ -1,15 +1,36 @@
-// constants/testIds/ — central registry of data-testid values used by the
-// end-to-end testing agent (qabot) to locate and interact with UI elements
-// during automated tests. UI without testids cannot be automatically verified.
-//
-// Structure: each feature lives in its own file (auth.js, cart.js, ...) and
-// is re-exported from here, so consumers can do a single import like
-// `import { LOGIN, CART } from '@/constants/testIds'` (or relative).
-//
-// Adding a new feature:
-//   1. Create constants/testIds/<feature>.js
-//   2. Export named objects (e.g. `export const PROFILE = { ... }`)
-//   3. Re-export here: `export * from './<feature>';`
+export const HOME = {
+  emergentLink: "home-emergent-link",
+  hero: "hero-section",
+  pledgeForm: "pledge-form",
+  pledgeSubmitBtn: "pledge-submit-btn",
+  pledgeSuccess: "pledge-success",
+  progressBar: "progress-bar-container",
+  liveTicker: "live-ticker",
+  recentPledges: "recent-pledges",
+  roadJourney: "road-journey-section",
+  grantCategories: "grant-categories-section",
+  faqSection: "faq-section",
+};
 
-export * from './auth';
-export * from './home';
+export const HEADER = {
+  logo: "header-logo",
+  pledgeCount: "header-pledge-count",
+  ctaBtn: "header-cta-btn",
+  mobileMenuBtn: "mobile-menu-btn",
+};
+
+export const ADMIN = {
+  pledgesTable: "admin-pledges-table",
+  searchInput: "admin-search-input",
+  exportBtn: "admin-export-btn",
+};
+
+export const CONTACT = {
+  form: "contact-form",
+  nameInput: "contact-name-input",
+  emailInput: "contact-email-input",
+  subjectSelect: "contact-subject-select",
+  messageInput: "contact-message-input",
+  submitBtn: "contact-submit-btn",
+  successMsg: "contact-success-msg",
+};
