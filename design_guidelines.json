@@ -1,0 +1,106 @@
+{
+  "theme": "light",
+  "typography": {
+    "fonts": {
+      "heading": "Instrument Serif",
+      "body": "Space Grotesk"
+    },
+    "rules": [
+      "Headlines/Display: Instrument Serif (italic for emphasis, sentence case only).",
+      "Body/UI: Space Grotesk (weights 300-700, lowercase or sentence case).",
+      "NO ALL CAPS text anywhere. Not even in overlines or buttons.",
+      "Use tight letter spacing (tracking-tight) for major headings.",
+      "Fluid scaling for headings (text-5xl to text-7xl for hero sections)."
+    ]
+  },
+  "colors": {
+    "background": "#F8F4ED",
+    "surface": "#F4EDE4",
+    "primary": "#E3FF00",
+    "secondary": "#4DD8FF",
+    "accent": "#057BC1",
+    "dark": "#083645",
+    "darker": "#0a2330",
+    "rules": [
+      "Lime Jelly (#E3FF00) used ONLY for primary CTAs and key highlights.",
+      "Dark sticky header uses Twilight Bliss (#083645) with backdrop-blur-xl.",
+      "Road Journey cards must use Twilight Bliss, Lime Jelly, Azure Cloud, Star of Life.",
+      "Never use pure black or pure white unless explicitly needed for contrast over images."
+    ]
+  },
+  "visual_enhancers": {
+    "shadows": "Subtle, soft ambient shadows. Avoid heavy box shadows.",
+    "corners": "Rounded corners (rounded-2xl or rounded-3xl) for cards and sections.",
+    "textures": "Subtle noise or grain for an editorial magazine feel, avoiding flat solid vectors.",
+    "icons": "No generic icons or blob shapes. No emojis (except in Road Journey node icons)."
+  },
+  "grids_and_layouts": {
+    "spacing": "Generous whitespace. Use p-12, p-16, p-24, p-32. Give elements breathing room to fit the editorial magazine aesthetic.",
+    "containers": "Bento grids with asymmetry for complex data (like Grant Categories).",
+    "header": "Dark sticky header. Twilight Bliss background with backdrop-blur-xl (e.g., bg-[#083645]/90). No transparent background.",
+    "road_journey": "Winding path, alternating left-right cards, dashed center line, 5 steps, hover lift effect. Do not use numbered step markers, use visual paths."
+  },
+  "motion": {
+    "interactions": "Hover lift effects on cards (-translate-y-1, shadow-lg).",
+    "transitions": "Smooth transitions on specific properties (never 'transition: all').",
+    "animations": "Animated progress bar toward 10,000 target. Live pledge ticker rotating names continuously."
+  },
+  "accessibility": {
+    "rules": [
+      "Ensure sufficient contrast between background and text.",
+      "All interactive elements (buttons, links, inputs) MUST include a 'data-testid' attribute in kebab-case."
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517488629431-6427e0ee1e5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwY29tbXVuaXR5JTIwaGFwcHl8ZW58MHx8fHwxNzg1MTY0NDI4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "community_champions",
+        "description": "People running on grassfield under blue skies, representing a diverse community."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1741699427875-654c81c7d84b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwd29ya2luZyUyMGxpYnJhcnl8ZW58MHx8fHwxNzg1MTY0NDM0fDA&ixlib=rb-4.1.0&q=85",
+        "category": "grants",
+        "description": "Student working in a library, representing education grants."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcHJvZmVzc2lvbmFsJTIwY2FyaW5nfGVufDB8fHx8MTc4NTE2NDQzNXww&ixlib=rb-4.1.0&q=85",
+        "category": "grants",
+        "description": "Medical professional caring, representing people in crisis grants."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBwbGFudHxlbnwwfHx8fDE3ODUxNjQ0MzR8MA&ixlib=rb-4.1.0&q=85",
+        "category": "grants",
+        "description": "Hands holding a plant, representing environmental or community building grants."
+      }
+    ]
+  },
+  "components": {
+    "header": "Dark sticky header (Twilight Bliss + blur). Logo text formatting: 'one' white / 'dollar' Lime Jelly / 'dream.' dim white, using Space Grotesk 700.",
+    "hero": "Magazine editorial style, bold typography. Email pledge form with live counter. Animated progress bar toward 10,000.",
+    "live_ticker": "Rotating names of pledges horizontally.",
+    "road_journey": "SIGNATURE section. Winding path with a dashed center line. Alternating left-right cards for 5 steps. Use Twilight Bliss, Lime Jelly, Azure Cloud, Star of Life. Emoji node icons on the path.",
+    "grant_categories": "Asymmetric bento grid layout displaying types of grants.",
+    "team": "6 members with colored initial circles instead of photos.",
+    "phases_timeline": "Horizontal scroll timeline displaying phases of the project.",
+    "trust_strip": "Dark bar at bottom/middle of page building trust."
+  },
+  "instructions_to_main_agent": [
+    "Write .jsx/.js files instead of .tsx where appropriate as the user requires .js files.",
+    "Build the UI utilizing standard HTML/Tailwind for the magazine layout, and Shadcn for interactive pieces (forms, accordion).",
+    "Do not use ALL CAPS anywhere, not even in labels or small text. Strictly enforce lowercase or sentence case.",
+    "Ensure header background is NOT fully transparent. Use bg-[#083645]/90 with backdrop-blur-xl.",
+    "Apply 'data-testid' to all buttons, links, forms, and interactive elements.",
+    "Avoid generic blob shapes or dashboard-like widget cards. Stick to the editorial, sophisticated vibe.",
+    "Use react-fast-marquee or framer-motion for the live pledge ticker and phases horizontal scroll timeline."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic, 'on distribution' outputs. Create a distinctive frontend that surprises and delights.",
+    "Do not apply 'transition: all' globally. Target specific properties to prevent breaking transforms.",
+    "Do not center align the app container (.App { text-align: center; } is FORBIDDEN).",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Add micro-animations for hover states and transitions.",
+    "Use glass-morphism effects with backdrop filters where overlapping content requires depth.",
+    "Create depth through layered design elements with z-index hierarchy."
+  ]
+}
